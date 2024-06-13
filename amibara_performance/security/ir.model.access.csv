@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access.employee.performance.amibara,access_employee_performance_amibara,amibara_performance.model_employee_performance_amibara,base.group_user,1,1,1,1
+access.performance.line.amibara,access_performance_line_amibara,amibara_performance.model_performance_line_amibara,base.group_user,1,1,1,1
+access.employee_competency.criteria,access_employee_competency_criteria,amibara_performance.model_employee_competency_criteria,base.group_user,1,1,1,1
+
+access.manager.performance.amibara,access_manager_performance_amibara,amibara_performance.model_manager_performance_amibara,base.group_user,1,1,1,1
+access.performance.line.amibara.manager,access_performance_line_amibara_manager,amibara_performance.model_performance_line_amibara_manager,base.group_user,1,1,1,1
+access.manager_competency.criteria,access_manager_competency_criteria,amibara_performance.model_manager_competency_criteria,base.group_user,1,1,1,1

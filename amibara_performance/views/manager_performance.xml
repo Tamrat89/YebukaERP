@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="manager_performance_amibara_action" model="ir.actions.act_window">
+        <field name="name">Manager Performance</field>
+        <field name="res_model">manager.performance.amibara</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context" eval="{'search_default_my_courses': 1}"/>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Manager Performance
+            </p>
+        </field>
+    </record>
+    <record id="manager_performance_amibara_view_form" model="ir.ui.view">
+        <field name="name">Manager Performance</field>
+        <field name="model">manager.performance.amibara</field>
+        <field name="arch" type="xml">
+            <form string="Manager Performance Amibara">
+                <header>
+                    <button name="action_submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+                    <button name="action_approve" type="object" string="Approve" states="submit" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="full-width" style="width: 100%;padding-left: 5%; padding-right:10%">
+                        <h2 style="text-align: center;">Management Members Performance Evaluation</h2>
+
+
+                    </div>
+                    <group>
+
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="employee_id"/>
+                            <!--                            <field name="company_id"/>-->
+                            <field name="department_id"/>
+                            <field name="job_title"/>
+                            <field name="evaluate_round"/>
+                            <field name="evaluation_period_from"/>
+                            <field name="evaluation_period_to"/>
+
+
+                        </group>
+                        <group>
+                            <field name="evalutator_name"/>
+                            <field name="evalutator_name2"/>
+                            <field name="evaluation_date"/>
+                            <!--                            <field name="last_evaulation_date"/>-->
+                            <field name="total_value"/>
+                            <field name="total_performance_value_divided"/>
+                            <field name="total_performance_value_divided_percent"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Performance" name="Performance">
+                            <field name="performance_line_ids" widget="one2many_list">
+
+
+                                <tree editable="true">
+
+
+                                    <field name="criteria_id"/>
+                                    <field name="ff"/>
+                                    <field name="ee"/>
+                                    <field name="me"/>
+                                    <field name="ni"/>
+                                    <field name="a"/>
+                                    <!--                                    <field name="remark"/>-->
+                                    <!--                                    <field name="total_value"/>-->
+                                    <!--                                    <field name="total_performance_value"/>-->
+                                    <!--                                    <field name="total_performance_value_divided"/>-->
+
+
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <field name="general_comment"/>
+
+                    </group>
+                    <group>
+                        <field name="general_comment1"/>
+
+                    </group>
+                    <group>
+<!--                        <field name="general_comment2"/>-->
+                    </group>
+                    <!--                     <group>-->
+                    <!--                        <field name="date"/>-->
+                    <!--                    </group>-->
+                    <group>
+                        <field name="employee_comment"/>
+                    </group>
+                    <group>
+                        <field name="general_comment4"/>
+                        <field name="date_of_manager_evaluate"/>
+                    </group>
+                    <div class="full-width" style="width: 100%;padding-left: 1%; padding-right:10%">
+                        <h3 style="text-align: left;">ማሳሰቢያ፣</h3>
+                        <h5>• ግምገማውን ከሚሞላው ኃላፊ ከፍተኛ ጥንቃቄ ና ሀቀኝነት የሚጠበቅ ሲሆን፣ ከግል ሁኔታ ጋር በተዛመደ መገምገም የለበትም፡፡፡፡</h5>
+                        <h5> •የላቀ አፈፃፀም__________________________90% - 100%</h5>
+                        <h5> • ወጥነት ያለው አፈፃፀም_____________________80% - 89%</h5>
+                        <h5> •መደበኛ አፈፃፀም________________________70% - 79%</h5>
+                        <h5> •አነስተኛ አፈፃፀም________________________ከ69% - በታች፡፡</h5>
+                    </div>
+                    <!--                    <group>-->
+                    <!--                        <field name="date"/>-->
+                    <!--                    </group>-->
+
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="manager_performance_amibara_view_tree" model="ir.ui.view">
+        <field name="name">Manager Performance</field>
+        <field name="model">manager.performance.amibara</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="job_title"/>
+                <field name="evalutator_name"/>
+                <field name="evaluation_date"/>
+                <field name="evaluate_round"/>
+                <field name="evaluation_period_from"/>
+                <field name="evaluation_period_to"/>
+
+
+                <field name="total_value"/>
+                <field name="total_performance_value_divided"/>
+                <!--                <field name="performance_line_ids" />-->
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="performance_manager_competency_action" model="ir.actions.act_window">
+        <field name="name">Manager Performance Competency Point</field>
+        <field name="res_model">manager_competency.criteria</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context" eval="{'search_default_my_courses': 1}"/>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Manager Performance Competency
+            </p>
+
+        </field>
+    </record>
+
+    <record id="performance_manager_competency_view_form" model="ir.ui.view">
+        <field name="name">Manager Performance Competency Point</field>
+        <field name="model">manager_competency.criteria</field>
+        <field name="arch" type="xml">
+            <form string="Performance Competency">
+
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="remark" string="Description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="performance_manager_competency_view_tree" model="ir.ui.view">
+        <field name="name">Manager Performance Competency Point</field>
+        <field name="model">manager_competency.criteria</field>
+        <field name="arch" type="xml">
+            <tree>
+
+                <field name="name"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <menuitem
+            id="manager_performance_competency_menu"
+            name="Manager Competency Point"
+            parent="employee_performance_configuration_root_menu"
+            action="performance_manager_competency_action"/>
+
+    <menuitem
+            id="manager_performance_amibara_sub_menu"
+            name="Manager Performance"
+            parent="performance_amibara_sub_menu"
+            action="manager_performance_amibara_action"/>
+
+
+</odoo>
+
+

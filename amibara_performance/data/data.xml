@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="seq_request_recruitment_information" model="ir.sequence">
+            <field name="name">Employee Performance</field>
+            <field name="code">employee.performance.amibara</field>
+            <field name="prefix">EPE/</field>
+             <field name="suffix">/%(year)s</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+
+
+</odoo>
