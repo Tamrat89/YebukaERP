@@ -7,7 +7,7 @@ class EmployeePerformanceAmibara(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = 'name'
 
-    name = fields.Char(string='REFERENCE', required=True, copy=False, readonly=True,
+    name = fields.Char(string='Reference', required=True, copy=False, readonly=True,
                                   default=lambda self: _("New"))
     employee_id = fields.Many2one('hr.employee', string="የሠራተኛው ስም", tracking=True, required=True )
     company_id = fields.Many2one('res.company', related="employee_id.company_id")
